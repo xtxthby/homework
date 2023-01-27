@@ -1,22 +1,126 @@
 // const cart = {
 //     items: [],
-//     getItems() {},
-//     add(product) {},
-//     remove(productName) {},
-//     clear() {},
-//     countTotalPrice() {},
+//     getItems() {
+//         // повертаемо значення items в через this
+//         // поки порожній масив
+//         return this.items;
+//     },
+//     add(product) {
+//         // додавання однакового товару
+//         // або кількість console.log(item);
+//          console.table(this.items);
+//         for (const item of this.items) {
+//             if (item.name === product.name) {
+//                 console.log('такий вже є', product.name);
+//                 // додаю
+//                 item.quantity += 1;
+//                 // вихожу щоб далы не додавалося
+//                 return;
+//             }
+//         }
+//         const newProduct = {
+//             ...product,
+//             quantity: 1,
+//         }
+//         this.items.push(newProduct);
+
+//         // пушим в items продукт product
+//         // з низу з cart.add
+//         // this.items.push(product);
+//     },
+//     // remove(productName) {
+//     //     for (const item of this.items) {
+//     //         console.log(item);
+//     //         if (productName === item.name) {
+//     //             console.log("знайшли цей продукт: ", productName);
+//     //         }
+//     //     }
+//     // },
+//     // видалення продукту
+//     //  remove(productName) {
+//     //      for (let i = 0; i < this.items.length; i += 1) {
+//     //         console.log(this.items[i]);
+//     //         if (productName === this.items[i].name) {
+//     //             console.log("знайшли цей продукт: ", productName);
+//     //         }
+//     //     }
+//     // },
+//     // те саме але з локальною змінною
+//     //    remove(productName) {
+//     //        for (let i = 0; i < this.items.length; i += 1) {
+//     //            const item = this.items[i];
+//     //         console.log(this.items[i]);
+//     //         if (productName === item.name) {
+//     //             console.log("знайшли цей продукт: ", productName);
+//     //         }
+//     //     }
+//     // те саме але з деструкторизацією
+//     remove(productName) {
+//         const { items } = this;
+//         for (let i = 0; i < items.length; i += 1) {
+//             const {name} = items[i];
+//             console.log(this.items[i]);
+//             if (productName === name) {
+//                 console.log("знайшли цей продукт: ", productName);
+//                 console.log('індекс: ', i);
+//                 // видали в items на i 1-ин елемент
+//                 items.splice(i, 1);
+//             }
+//         }
+//     },
+//     //  видалення з корзини
+//     clear() {
+//         this.items = [];
+//     },
+//     // метод який рахує суму усіх продуктів
+//     countTotalPrice() {
+//         // console.log(this.items);
+
+//         // let total = 0;
+
+//         // for (const item of this.items) {
+//         //     console.log(item);
+//         //     total += item.price;
+//         // }
+//         // return total;
+
+//         // те саме
+//          console.log(this.items);
+//         const { items } = this;
+//         let total = 0;
+
+//         for (const {price, quantity} of items) {
+//             console.log(price);
+//             total += price * quantity;
+//         }
+//         return total;
+//     },
 //     increseQuantity(productName) { },
 //     decreaseQuantity(productName) {},
 // }
 
+// console.log(cart.getItems());
+
+// cart.add({ name: "Apel", price: 60 });
+// cart.add({ name: "Apel", price: 60 });
+// cart.add({ name: "Strawbery", price: 110 });
+// cart.add({ name: "Strawbery", price: 110 });
+// cart.add({ name: "Strawbery", price: 110 });
+// cart.add({ name: "Pear", price: 50 });
+// cart.add({ name: "Lemon", price: 50 });
+
 // console.table(cart.getItems());
 
-// cart.add({ name: "", price: 50 });
-// cart.add({ name: "", price: 50 });
-// cart.add({ name: "", price: 50 });
-// cart.add({ name: "", price: 50 });
+// console.log('Total: ', cart.countTotalPrice());
 
+// cart.remove("Pear");
 // console.table(cart.getItems());
+
+// cart.clear();
+// console.log(cart.getItems());
+
+
+
 
 
 //  розпилення яке було раніше
@@ -175,25 +279,121 @@
 
 
 
-// деструктурізація через entries
-const authors = {
-    kiwi: 4,
-    poyu: 7,
-    ajax: 9,
-    mango: 6,
-};
+// // деструктурізація через entries
+// const authors = {
+//     kiwi: 4,
+//     poyu: 7,
+//     ajax: 9,
+//     mango: 6,
+// };
 
-const entries = Object.entries(authors);
-// це масив тому дестру... масиву
-console.log(entries);
-for (const entry of entries) {
-    const [name, rating] = entry;
+// const entries = Object.entries(authors);
+// // це масив тому дестру... масиву
+// // console.log(entries);
+// // for (const entry of entries) {
+// //     // console.log(entry);
+// //     const [name, rating] = entry;
+// //     console.log(name, rating);
+// // }
+// //   те саме
+// for (const [name, rating] of entries) {
+//     // console.log(entry);
+
+//     console.log(name, rating);
+// }
+
+
+// ми хочемо не всі дані деструктузувати
+// const user = {
+//     name: "Jacques Gluke",
+//     tag: "jgluke",
+//     location: 'Ocho Rios, Jamaica',
+//     avatar: "https://via.placeholder.com/640/480",
+//     stats: {
+//         followers: 5603,
+//         views: 4827,
+//         likes: 1308,
+//     },
+// };
+
+// const { name, tag, location, ...restProps } = user;
+
+
+// console.log(name, tag, location);
+// console.log(restProps);
+
+
+// деструктуризація в функції
+
+// const showProfileInfo = function (userProfile) {
+//     console.log(userProfile);
+//     const {
+//         name,
+//         tag,
+//         location,
+//         avatar,
+//         stats: { followers, views, likes },
+//     } = userProfile;
+//     console.log(name, tag, location, avatar, followers, views, likes);
+// }
+
+// const user = {
+//     name: "Jacques Gluke",
+//     tag: "jgluke",
+//     location: 'Ocho Rios, Jamaica',
+//     avatar: "https://via.placeholder.com/640/480",
+//     stats: {
+//         followers: 5603,
+//         views: 4827,
+//         likes: 1308,
+//     },
+// };
+
+
+// showProfileInfo(user);
+
+
+//  другий варіант
+// також можна використовувати
+// restProps
+
+// const showProfileInfo = function ({
+//     name,
+//     tag,
+//     location,
+//     avatar,
+//     stats: { followers, views, likes },}) {
+   
+//     console.log(name, tag, location, avatar, followers, views, likes);
+// }
+
+// const user = {
+//     name: "Jacques Gluke",
+//     tag: "jgluke",
+//     location: 'Ocho Rios, Jamaica',
+//     avatar: "https://via.placeholder.com/640/480",
+//     stats: {
+//         followers: 5603,
+//         views: 4827,
+//         likes: 1308,
+//     },
+// };
+
+
+// showProfileInfo(user);
+
+
+
+
+
+function makeTask(data) {
+  const completed = false;
+  const category = "General";
+  const priority = "Normal";
+  // Change code below this line
+
+  return {...{completed, category, priority}, ...data,};
+  // Change code above this line
 }
 
-
-
-console.log(name, rating);
-
-
-
-
+console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
