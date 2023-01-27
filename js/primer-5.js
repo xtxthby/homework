@@ -420,7 +420,7 @@
 //         if (friend.online) {
 //             friendsByStatus.online.push(friend);
 //             continue;
-//         } 
+//         }
 //         friendsByStatus.offline.push(friend);
         
 //     }
@@ -436,19 +436,25 @@
 //   { name: "Grip", price: 1200, quantity: 9 },
 // ];
 
+// console.log(products);
+
 // function getAllPropValues(propName) {
-//   // Change code below this line
-//   const velue = [];
-//   for (const product of products) {
-//     if(product.name === propName) 
-//      velue.push(product); 
-//   }
+//     const velue = [];
+//     for (const product of products) {
+//         console.log(product);
+//         if (product[propName]) {
+//             velue.push(product[propName]);
+//         }
+//     }
 
-//   return velue;
-//   // Change code above this line
+//     // return prop.Names;
+//     console.log(velue);
+
 // }
-// console.log(getAllPropValues("name"));
-
+// getAllPropValues("name");
+// getAllPropValues("price");
+// getAllPropValues("quantity");
+// getAllPropValues("category");
 
 // function multiply(firstNumber, secondNumber, ...otherArgs) {
 //   console.log(firstNumber); // Значення першого аргументу
@@ -459,3 +465,38 @@
 // multiply(1, 2);
 // multiply(1, 2, 3);
 // multiply(1, 2, 3, 4);
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+// console.log(products);
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//     let result = 0;
+//     for (const product of products) {
+//         console.log(product);
+//         if (product.name === productName) {
+//             result = product.price * product.quantity;
+//         }
+//     }
+
+//     // return result;
+//     console.log(result);
+    
+//   // Change code above this line
+// }
+
+// calculateTotalPrice("Radar");
+
+// const { today: { low: lowToday, high: highToday, icon: todayIcon },
+//     tomorrow: { low: lowTomorrow, high: highTomorrow, icon: tomorrowIcon
+//         = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg" }, } = highTemperatures;
+
+//   const {today:{low: todayLow, high: todayHigh}, tomorrow:{low:tomorrowLow,high: tomorrowHigh},} = forecast;
+
+
+
