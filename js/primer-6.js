@@ -28,75 +28,75 @@
 //         // з низу з cart.add
 //         // this.items.push(product);
 //     },
-//     // remove(productName) {
-//     //     for (const item of this.items) {
-//     //         console.log(item);
-//     //         if (productName === item.name) {
-//     //             console.log("знайшли цей продукт: ", productName);
-//     //         }
-//     //     }
-//     // },
-//     // видалення продукту
-//     //  remove(productName) {
-//     //      for (let i = 0; i < this.items.length; i += 1) {
-//     //         console.log(this.items[i]);
-//     //         if (productName === this.items[i].name) {
-//     //             console.log("знайшли цей продукт: ", productName);
-//     //         }
-//     //     }
-//     // },
-//     // те саме але з локальною змінною
-//     //    remove(productName) {
-//     //        for (let i = 0; i < this.items.length; i += 1) {
-//     //            const item = this.items[i];
-//     //         console.log(this.items[i]);
-//     //         if (productName === item.name) {
-//     //             console.log("знайшли цей продукт: ", productName);
-//     //         }
-//     //     }
-//     // те саме але з деструкторизацією
-//     remove(productName) {
-//         const { items } = this;
-//         for (let i = 0; i < items.length; i += 1) {
-//             const {name} = items[i];
-//             console.log(this.items[i]);
-//             if (productName === name) {
-//                 console.log("знайшли цей продукт: ", productName);
-//                 console.log('індекс: ', i);
-//                 // видали в items на i 1-ин елемент
-//                 items.splice(i, 1);
-//             }
-//         }
-//     },
-//     //  видалення з корзини
-//     clear() {
-//         this.items = [];
-//     },
-//     // метод який рахує суму усіх продуктів
-//     countTotalPrice() {
-//         // console.log(this.items);
+    // remove(productName) {
+    //     for (const item of this.items) {
+    //         console.log(item);
+    //         if (productName === item.name) {
+    //             console.log("знайшли цей продукт: ", productName);
+    //         }
+    //     }
+    // },
+    // видалення продукту
+    //  remove(productName) {
+    //      for (let i = 0; i < this.items.length; i += 1) {
+    //         console.log(this.items[i]);
+    //         if (productName === this.items[i].name) {
+    //             console.log("знайшли цей продукт: ", productName);
+    //         }
+    //     }
+    // },
+    // те саме але з локальною змінною
+    //    remove(productName) {
+    //        for (let i = 0; i < this.items.length; i += 1) {
+    //            const item = this.items[i];
+    //         console.log(this.items[i]);
+    //         if (productName === item.name) {
+    //             console.log("знайшли цей продукт: ", productName);
+    //         }
+    //     }
+    // те саме але з деструкторизацією
+    // remove(productName) {
+    //     const { items } = this;
+    //     for (let i = 0; i < items.length; i += 1) {
+    //         const {name} = items[i];
+    //         console.log(this.items[i]);
+    //         if (productName === name) {
+    //             console.log("знайшли цей продукт: ", productName);
+    //             console.log('індекс: ', i);
+    //             // видали в items на i 1-ин елемент
+    //             items.splice(i, 1);
+    //         }
+    //     }
+    // },
+    //  видалення з корзини
+    // clear() {
+    //     this.items = [];
+    // },
+    // метод який рахує суму усіх продуктів
+    // countTotalPrice() {
+    //     // console.log(this.items);
 
-//         // let total = 0;
+    //     // let total = 0;
 
-//         // for (const item of this.items) {
-//         //     console.log(item);
-//         //     total += item.price;
-//         // }
-//         // return total;
+    //     // for (const item of this.items) {
+    //     //     console.log(item);
+    //     //     total += item.price;
+    //     // }
+    //     // return total;
 
-//         // те саме
-//          console.log(this.items);
-//         const { items } = this;
-//         let total = 0;
+    //     // те саме
+    //      console.log(this.items);
+    //     const { items } = this;
+    //     let total = 0;
 
-//         for (const {price, quantity} of items) {
-//             console.log(price);
-//             total += price * quantity;
-//         }
-//         return total;
-//     },
-//     increseQuantity(productName) { },
-//     decreaseQuantity(productName) {},
+    //     for (const {price, quantity} of items) {
+    //         console.log(price);
+    //         total += price * quantity;
+    //     }
+    //     return total;
+    // },
+    // increseQuantity(productName) { },
+    // decreaseQuantity(productName) {},
 // }
 
 // console.log(cart.getItems());
@@ -386,14 +386,130 @@
 
 
 
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
-  // Change code below this line
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
 
-  return {...{completed, category, priority}, ...data,};
-  // Change code above this line
-}
+//   return {...{completed, category, priority}, ...data,};
+//   // Change code above this line
+// }
 
-console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+// console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+
+
+// function add(...args) {
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+//   // Change code above this line
+// }
+
+// add(12, 4, 11, 48);
+
+// function addOverNum(num, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > num) {
+//       total += arg;
+//     }
+//   }
+
+//   return total;
+//   // Change code above this line
+// }
+
+// function findMatches(array, ...args) {
+//   const matches = []; // Don't change this line
+//   for (const element of array) {
+//     if (args.includes(element)) {
+//       matches.push(element);
+//     }
+//   }
+//   // Change code above this line
+//   return matches;
+// }
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7);
+
+
+
+// // видалення елементу
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//     for (let i = 0; i < this.potions.length; i += 1){
+//       if (potionName === this.potions[i]){
+//          this.potions.splice(i, 1);
+//       }
+//     }
+
+
+//     // Change code above this line
+//   },
+// };
+
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+
+
+
+// віднімання і додавання
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+//     for (let i = 0; i < this.potions.length; i += 1){
+//       if (oldName === this.potions[i]) {
+//         this.potions.splice(i, 1, newName);
+//       }
+//     }// Change code above this line
+//   },
+// };
+
+// atTheOldToad.updatePotionName("Stone skin", "Invisibility")
+
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     if (this.potions.includes(newPotion)) {
+//       return `Error! Potion ${newPotion} is already in your inventory!`;
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     const potionIndex = this.potions.indexOf(potionName);
+
+//     if (potionIndex === -1) {
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
+
+//     this.potions.splice(potionIndex, 1);
+//   },
+//   updatePotionName(oldName, newName) {
+//     const potionIndex = this.potions.indexOf(oldName);
+
+//     if (potionIndex === -1) {
+//       return `Potion ${oldName} is not in inventory!`;
+//     }
+
+//     this.potions.splice(potionIndex, 1, newName);
+//   },
+//   // Change code above this line
+// };
+
+
+

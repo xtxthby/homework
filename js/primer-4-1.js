@@ -236,7 +236,7 @@
 // }
 // fn(1, 2, 3);
 
-// другий спосіб
+// // другий спосіб
 // const fn = function (...args) {
 //     console.log(args);
 // }
@@ -266,7 +266,7 @@
 
 
 
-//  написати новий масив з однакових цифр
+// //  написати новий масив з однакових цифр
 
 // const filterNumbers = function (array, ...args) {
 //     console.log('array: ', array);
