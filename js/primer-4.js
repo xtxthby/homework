@@ -185,7 +185,7 @@
 
 
 
-// об'єднання усіх елементів в строку
+// // об'єднання усіх елементів в строку
 // const friends = ['Mango', 'kiwi', 'Poly', 'Ajax'];
 // let string = '';
 
@@ -194,11 +194,11 @@
 // }
 // string = string.slice(0, string.length - 1);
 // console.log(string);
-// обираємо від 0 до -1ю видаляе остьанній символ
-// те саме але через join
-// const string = friends.join(',');
-// console.log(friends);
-// console.log(string);
+// // обираємо від 0 до -1ю видаляе остьанній символ
+// // те саме але через join
+// // const string = friends.join(',');
+// // console.log(friends);
+// // console.log(string);
 
 
 //  змінити букви по розміру на протилежні
@@ -244,22 +244,22 @@
 
 
 //  видалення eлементу з масиву
-// const cards = [
-//     'Картка - 1',
-//     'Картка - 2',
-//     'Картка - 3',
-//     'Картка - 4',
-//     'Картка - 5',
-// ]
-// console.table(cards);
+const cards = [
+    'Картка - 1',
+    'Картка - 2',
+    'Картка - 3',
+    'Картка - 4',
+    'Картка - 5',
+]
+console.table(cards);
 
-// cards.splice(1, 1);
-// console.table(cards);
+cards.splice(1, 1);
+console.table(cards);
 
-// const cardToRemove = 'Картка - 3';
-// const index = cards.indexOf(cardToRemove);
-// cards.splice(index, 1);
-// console.table(cards);
+const cardToRemove = 'Картка - 3';
+const index = cards.indexOf(cardToRemove);
+cards.splice(index, 1);
+console.table(cards);
 
 
 // додавання елементу
